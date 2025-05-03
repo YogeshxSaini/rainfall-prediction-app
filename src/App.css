@@ -1,0 +1,104 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Inter', sans-serif;
+  background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2em;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #666;
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.input-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  .input-form {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.input-field {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.button-wrapper {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .button-wrapper {
+    grid-column: span 2;
+  }
+}
+
+.predict-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.predict-btn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.predict-btn:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #333;
+}
